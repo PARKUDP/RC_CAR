@@ -224,10 +224,10 @@ void Distance_Measurement()
 { 
   digitalWrite(TrigPin, LOW);
   delay(2);
-  digitalWrite(TrigPin, HIGH);  // trigPin에서 초음파 발생(echoPin도 HIGH)
+  digitalWrite(TrigPin, HIGH);  
   delayMicroseconds(10);
   digitalWrite(TrigPin, LOW);
-  duration = pulseIn(EchoPin, HIGH);    // echoPin 이 HIGH를 유지한 시간을 저장 한다.
+  duration = pulseIn(EchoPin, HIGH);    
   distance = ((float)(340 * duration) / 1000) / 2;
   delay(5);
 }
